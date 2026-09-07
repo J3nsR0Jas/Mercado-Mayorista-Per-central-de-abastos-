@@ -1,0 +1,27 @@
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+.tabla-precios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: var(--color-claro);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.tabla-precios th, 
+.tabla-precios td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.tabla-precios th {
+    background-color: var(--color-secundario);
+    color: var(--color-claro);
+}
+
+.tabla-precios tbody tr:hover {
+    background-color: #f1f8e9;
+}

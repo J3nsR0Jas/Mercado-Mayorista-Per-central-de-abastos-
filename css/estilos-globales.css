@@ -1,0 +1,93 @@
+:root {
+    --color-primario: #1b5e20;
+    --color-secundario: #2e7d32;
+    --color-acento: #f57f17;
+    --color-oscuro: #212121;
+    --color-claro: #ffffff;
+    --color-gris: #f4f6f8;
+    --color-borde: #e0e0e0;
+    --fuente-principal: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: var(--fuente-principal);
+    color: var(--color-oscuro);
+    line-height: 1.6;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.seccion {
+    padding: 60px 0;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-primario);
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.header {
+    background-color: var(--color-primario);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.header-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    color: var(--color-claro);
+    font-size: 1.5rem;
+}
+
+.logo span {
+    color: var(--color-acento);
+}
+
+.nav a {
+    color: var(--color-claro);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding-bottom: 4px;
+}
+
+.nav a:hover,
+.nav a.activo {
+    color: var(--color-acento);
+    border-bottom: 2px solid var(--color-acento);
+}
+
+.footer {
+    background-color: var(--color-oscuro);
+    color: var(--color-claro);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}

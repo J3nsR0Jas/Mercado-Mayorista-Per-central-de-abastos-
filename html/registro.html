@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Mayorista Perú - Registro</title>
+    <link rel="stylesheet" href="../css/estilos-globales.css">
+    <link rel="stylesheet" href="../css/estilos registro.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="contenedor header-contenido">
+            <h1 class="logo">Mercado Mayorista <span>Perú</span></h1>
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="precios.html">Precios Diarios</a>
+                <a href="horarios.html">Ingreso de Camiones</a>
+                <a href="registro.html" class="activo">Registro</a>
+                <a href="contacto.html">Ubicación</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="seccion contenedor">
+        <h2 class="titulo-seccion">Solicitud de Acreditación de Comerciante</h2>
+        <p class="subtitulo">Completa el formulario para registrar tu vehículo de carga o solicitar un puesto en pabellón.</p>
+
+        <form class="formulario">
+            <div class="campo">
+                <label for="nombre">Nombre o Razón Social:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ej. Comercializadora del Sur S.A.C.">
+            </div>
+
+            <div class="campo">
+                <label for="ruc">RUC o DNI:</label>
+                <input type="text" id="ruc" name="ruc" required maxlength="11" placeholder="Ingrese 8 o 11 dígitos">
+            </div>
+
+            <div class="campo">
+                <label for="tipo">Tipo de Trámite:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="" disabled selected>-- Seleccione una opción --</option>
+                    <option value="ingreso-camion">Pase de ingreso vehicular (Transportista)</option>
+                    <option value="alquiler-pabellon">Solicitud de puesto en Pabellón</option>
+                    <option value="consulta-precios">Consulta de boletín comercial</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="pabellon">Sector / Producto principal:</label>
+                <select id="pabellon" name="pabellon">
+                    <option value="tuberculos">Tubérculos y Raíces</option>
+                    <option value="hortalizas">Hortalizas y Verduras</option>
+                    <option value="frutas">Frutas y Cítricos</option>
+                    <option value="abarrotes">Abarrotes en General</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="mensaje">Detalles de la Carga / Consulta:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Indique toneladas aproximadas, placa de vehículo o detalle de su consulta..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-bloque">Enviar Solicitud</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <p>&copy; 2026 Mercado Mayorista Perú - Empresa Municipal de Mercados. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
