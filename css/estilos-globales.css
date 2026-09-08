@@ -28,7 +28,13 @@ html {
 }
 
 .seccion {
-    padding: 60px 0;
+    padding: 50px 0;
+}
+
+.bg-gris {
+    background-color: var(--color-gris);
+    border-radius: 8px;
+    padding: 40px 20px;
 }
 
 .titulo-seccion {
@@ -41,7 +47,7 @@ html {
 .subtitulo {
     text-align: center;
     color: #666;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 .header {
@@ -68,10 +74,15 @@ html {
     color: var(--color-acento);
 }
 
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .nav a {
     color: var(--color-claro);
     text-decoration: none;
-    margin-left: 20px;
     font-weight: 500;
     transition: color 0.3s;
     padding-bottom: 4px;
@@ -81,6 +92,14 @@ html {
 .nav a.activo {
     color: var(--color-acento);
     border-bottom: 2px solid var(--color-acento);
+}
+
+.btn-deshabilitado {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+    cursor: default;
+    user-select: none;
+    padding-bottom: 4px;
 }
 
 .footer {

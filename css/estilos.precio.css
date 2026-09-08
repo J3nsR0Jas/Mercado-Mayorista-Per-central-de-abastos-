@@ -1,3 +1,72 @@
+.panel-simulador {
+    background-color: var(--color-gris);
+    border: 2px solid var(--color-secundario);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.panel-simulador h3 {
+    color: var(--color-primario);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.grid-simulador {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.campo input, 
+.campo select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-borde);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.campo input:focus, 
+.campo select:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 4px rgba(46, 125, 50, 0.3);
+}
+
+.resultado-simulacion {
+    margin-top: 20px;
+    background-color: var(--color-secundario);
+    color: var(--color-claro);
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.resultado-simulacion h4 {
+    font-size: 1.3rem;
+}
+
+.resultado-simulacion span {
+    color: var(--color-acento);
+    font-weight: bold;
+}
+
+.resultado-simulacion .detalle-calculo {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    opacity: 0.9;
+    font-style: italic;
+}
+
 .tabla-contenedor {
     overflow-x: auto;
 }
@@ -5,7 +74,6 @@
 .tabla-precios {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
     background-color: var(--color-claro);
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
@@ -13,13 +81,17 @@
 .tabla-precios th, 
 .tabla-precios td {
     padding: 14px 18px;
-    text-align: left;
     border-bottom: 1px solid var(--color-borde);
+    text-align: left;
 }
 
 .tabla-precios th {
-    background-color: var(--color-secundario);
+    background-color: var(--color-primario);
     color: var(--color-claro);
+}
+
+.tabla-precios tbody tr {
+    transition: background-color 0.2s;
 }
 
 .tabla-precios tbody tr:hover {

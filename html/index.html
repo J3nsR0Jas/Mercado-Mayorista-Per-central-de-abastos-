@@ -15,9 +15,10 @@
             <nav class="nav">
                 <a href="index.html" class="activo">Inicio</a>
                 <a href="precios.html">Precios Diarios</a>
-                <a href="horarios.html">Ingreso de Camiones</a>
-                <a href="registro.html">Registro</a>
-                <a href="contacto.html">Ubicación</a>
+                
+                <span class="btn-deshabilitado" title="Sección informativa">Horarios</span>
+                <span class="btn-deshabilitado" title="Sección informativa">Registro</span>
+                <span class="btn-deshabilitado" title="Sección informativa">Contacto</span>
             </nav>
         </div>
     </header>
@@ -25,30 +26,115 @@
     <main class="hero">
         <div class="contenedor hero-contenido">
             <h2>Gran Central de Abastos de Lima</h2>
-            <p>Monitoreo de precios en tiempo real y abastecimiento garantizado para comerciantes y mayoristas.</p>
-            <a href="precios.html" class="btn">Ver Precios de Hoy</a>
+            <p>Plataforma de información, abastecimiento y comercialización de productos agrícolas al por mayor.</p>
+            <a href="precios.html" class="btn">Ir al Simulador de Precios</a>
         </div>
     </main>
 
     <section class="seccion contenedor">
-        <h2 class="titulo-seccion">Bienvenidos al Mercado Mayorista Perú</h2>
-        <p class="subtitulo">Somos la plataforma principal de comercialización y distribución de alimentos agrícolas del país.</p>
+        <h2 class="titulo-seccion">Resumen Informativo de Precios Diarios</h2>
+        <p class="subtitulo">Vista de referencia general del mercado (Para simulación y cotizaciones dinámicas use la pestaña "Precios Diarios").</p>
+
+        <div class="tabla-contenedor">
+            <table class="tabla-estatica">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Variedad / Calidad</th>
+                        <th>Pabellón</th>
+                        <th>Precio Referencial (S/)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Papa</td>
+                        <td>Canchán (Primera)</td>
+                        <td>A - Tubérculos</td>
+                        <td>S/ 1.50 / kg</td>
+                    </tr>
+                    <tr>
+                        <td>Cebolla</td>
+                        <td>Roja Arequipeña</td>
+                        <td>B - Hortalizas</td>
+                        <td>S/ 2.20 / kg</td>
+                    </tr>
+                    <tr>
+                        <td>Tomate</td>
+                        <td>Katya (Caja x 20kg)</td>
+                        <td>B - Hortalizas</td>
+                        <td>S/ 3.00 / kg</td>
+                    </tr>
+                    <tr>
+                        <td>Limón</td>
+                        <td>Sutil (Cajón)</td>
+                        <td>C - Cítricos</td>
+                        <td>S/ 4.00 / kg</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="seccion contenedor bg-gris">
+        <h2 class="titulo-seccion">Horarios Informativos de Ingreso de Camiones</h2>
+        <p class="subtitulo">Programación general para el acceso de transporte de carga y pesaje en balanza.</p>
+
         <div class="grid-tres-columnas">
             <div class="tarjeta-info">
-                <h3>Precios Transparentes</h3>
-                <p>Publicación diaria de boletines informativos sobre el costo de tubérculos, frutas y hortalizas.</p>
+                <h3>Carga Pesada (Tráileres / Camiones)</h3>
+                <p class="resaltado-horario">00:00 hrs - 06:00 hrs</p>
+                <p>Ingreso exclusivo por Puerta 1. Descarga de productos agrícolas al por mayor en pabellones A y B.</p>
             </div>
+
             <div class="tarjeta-info">
-                <h3>Operatividad 24/7</h3>
-                <p>Infraestructura acondicionada para el ingreso, pesaje y descarga permanente de camiones pesados.</p>
+                <h3>Carga Mediana (Furgones / Camionetas)</h3>
+                <p class="resaltado-horario">06:00 hrs - 12:00 hrs</p>
+                <p>Ingreso por Puerta 2. Abastecimiento directo para comerciantes mayoristas y distribuidores.</p>
             </div>
+
             <div class="tarjeta-info">
-                <h3>Atención al Comerciante</h3>
-                <p>Módulos de registro y facilidades para transportistas, distribuidores y comerciantes minoristas.</p>
+                <h3>Despacho y Salida General</h3>
+                <p class="resaltado-horario">12:00 hrs - 18:00 hrs</p>
+                <p>Retiro de vehículos pesados y reacondicionamiento de zonas de descarga y limpieza.</p>
             </div>
         </div>
     </section>
 
+    <section class="seccion contenedor" id="registro-seccion">
+        <h2 class="titulo-seccion">Registro y Solicitud de Acreditación</h2>
+        <p class="subtitulo">Formulario para comerciantes y transportistas interesados en operar en la Central de Abastos.</p>
+
+        <form class="formulario" onsubmit="event.preventDefault(); alert('Solicitud registrada correctamente.');">
+            <div class="campo">
+                <label for="nombre">Nombre o Razón Social:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ej. Comercializadora Agrícola S.A.C.">
+            </div>
+
+            <div class="campo">
+                <label for="ruc">RUC / DNI:</label>
+                <input type="text" id="ruc" name="ruc" required maxlength="11" placeholder="Ingrese 8 u 11 dígitos">
+            </div>
+
+            <div class="campo">
+                <label for="tipo">Tipo de Trámite:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="" disabled selected>-- Seleccione una opción --</option>
+                    <option value="ingreso">Pase de Ingreso Vehicular</option>
+                    <option value="puesto">Solicitud de Puesto en Pabellón</option>
+                    <option value="boletin">Suscripción Informativa</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="mensaje">Detalle de la Consulta:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describa brevemente su requerimiento..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-bloque">Enviar Solicitud</button>
+        </form>
+    </section>
+
+    <!-- Pie de Página -->
     <footer class="footer">
         <div class="contenedor">
             <p>&copy; 2026 Mercado Mayorista Perú - Empresa Municipal de Mercados. Todos los derechos reservados.</p>

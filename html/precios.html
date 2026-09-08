@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercado Mayorista Perú - Precios Diarios</title>
+    <title>Mercado Mayorista Perú - Precios y Simulación</title>
     <link rel="stylesheet" href="../css/estilos-globales.css">
     <link rel="stylesheet" href="../css/estilos.precio.css">
 </head>
@@ -15,17 +15,43 @@
             <nav class="nav">
                 <a href="index.html">Inicio</a>
                 <a href="precios.html" class="activo">Precios Diarios</a>
-                <a href="horarios.html">Ingreso de Camiones</a>
-                <a href="registro.html">Registro</a>
-                <a href="contacto.html">Ubicación</a>
+                <span class="btn-deshabilitado">Horarios</span>
+                <span class="btn-deshabilitado">Registro</span>
+                <span class="btn-deshabilitado">Contacto</span>
             </nav>
         </div>
     </header>
 
     <main class="seccion contenedor">
-        <h2 class="titulo-seccion">Boletín de Precios Diarios</h2>
-        <p class="subtitulo">Precios por kilogramo / saco actualizados al día de hoy en pabellones mayoristas.</p>
-        
+        <h2 class="titulo-seccion">Simulación de Precios Diarios</h2>
+        <p class="subtitulo">A continuación se muestra la cotización estimada y el detalle referencial de precios en mercado.</p>
+
+        <div class="panel-simulador">
+            <h3>Ejemplo de Simulación de Cotización</h3>
+            
+            <div class="grid-simulador">
+                <div class="campo">
+                    <label>Producto Cotizado:</label>
+                    <p>Papa Canchán (Primera)</p>
+                </div>
+
+                <div class="campo">
+                    <label>Precio Unitario Referencial:</label>
+                    <p>S/ 1.50 / kg</p>
+                </div>
+
+                <div class="campo">
+                    <label>Volumen de Compra Estimado:</label>
+                    <p>100 kg</p>
+                </div>
+            </div>
+
+            <div class="resultado-simulacion">
+                <h4>Total de Cotización Calculado: <span>S/ 150.00</span></h4>
+                <p class="detalle-calculo">(Ejemplo: 100 kg × S/ 1.50 / kg = S/ 150.00)</p>
+            </div>
+        </div>
+
         <div class="tabla-contenedor">
             <table class="tabla-precios">
                 <thead>
@@ -33,41 +59,41 @@
                         <th>Producto</th>
                         <th>Variedad / Calidad</th>
                         <th>Pabellón</th>
-                        <th>Precio Min. (S/)</th>
-                        <th>Precio Max. (S/)</th>
+                        <th>Precio Mín. (S/)</th>
+                        <th>Precio Máx. (S/)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Papa</td>
+                        <td class="nombre-prod">Papa</td>
                         <td>Canchán (Primera)</td>
                         <td>A - Tubérculos</td>
                         <td>S/ 1.20</td>
                         <td>S/ 1.50</td>
                     </tr>
                     <tr>
-                        <td>Cebolla</td>
+                        <td class="nombre-prod">Cebolla</td>
                         <td>Roja Arequipeña</td>
                         <td>B - Hortalizas</td>
                         <td>S/ 1.80</td>
                         <td>S/ 2.20</td>
                     </tr>
                     <tr>
-                        <td>Tomate</td>
+                        <td class="nombre-prod">Tomate</td>
                         <td>Katya (Caja x 20kg)</td>
                         <td>B - Hortalizas</td>
                         <td>S/ 2.50</td>
                         <td>S/ 3.00</td>
                     </tr>
                     <tr>
-                        <td>Limón</td>
+                        <td class="nombre-prod">Limón</td>
                         <td>Sutil (Cajón)</td>
                         <td>C - Cítricos</td>
                         <td>S/ 3.20</td>
                         <td>S/ 4.00</td>
                     </tr>
                     <tr>
-                        <td>Zanahoria</td>
+                        <td class="nombre-prod">Zanahoria</td>
                         <td>Criolla (Saco)</td>
                         <td>A - Tubérculos</td>
                         <td>S/ 0.90</td>
